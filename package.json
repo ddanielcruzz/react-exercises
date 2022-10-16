@@ -1,0 +1,15 @@
+{
+  "name": "@react-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "01": "npm run start -w @react-exercises/01"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "exercises/*"
+  ]
+}
