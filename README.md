@@ -11,3 +11,5 @@ Esto quiere decir que cuando el mentor avise que hay un nuevo ejercicio disponib
 ## Como usar el repositorio 
 
 Para empezar a correr los ejercicios primero es necesario instalar todas las dependencias con el comando `npm install`
+
+Para correr cada ejercicio corre el comando `npm run {numero de ejercicio}` e.j para correr el ejercicio 01 ejecuta el comando `npm run 01`
