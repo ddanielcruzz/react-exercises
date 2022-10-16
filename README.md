@@ -15,7 +15,7 @@ Teniendo las dependencias instaladas, para correr cada ejercicio ejecuta el coma
 
 Dentro de cada ejercicio encontrarás un `README.md` con instrucciones sobre el ejercicio. 
 
-**Es muy importante que únicamente modifiques el código dentro de exercises/* estando en la rama correcta. No instales dependencias de manera directa (solo ejecutando `npm install` cuando así se los indique), ni modifiques nada fuera del directorio previamente mencionado**
+**Es muy importante que únicamente modifiques el código dentro de exercises/ estando en la rama correcta. No instales dependencias de manera directa (solo ejecutando `npm install` cuando así se los indique), ni modifiques nada fuera del directorio previamente mencionado**
 ## Requerimientos para PRs
 
 Al momento de finalizar tu ejercicio haz un PR de tu rama del ejercicio a la rama de tu nombre. Al realizar el PR pon la etiqueta del número del ejercicio. Solo haz un PR si tu ejercicio está completo. Si tienes dudas para completar tu ejercicio ve la sección "Como obtener ayuda"
