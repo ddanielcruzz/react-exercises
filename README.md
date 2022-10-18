@@ -23,3 +23,6 @@ Al momento de finalizar tu ejercicio haz un PR de tu rama del ejercicio a la ram
 ## Como obtener ayuda 
 
 Si la duda surge durante la clase, preguntar al mentor es el método más efectivo. Si el ejercicio no es realizado durante la clase, puedes igual preguntar directamente al mentor pero es preferible que publiques tu pregunta en la sección de Discusiones de GitHub con las etiquetas correctas. 
+
+
+Prueba
