@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "01": "npm run start -w @react-exercises/01"
+    "exercises-01": "npm run start -w @react-exercises/exercises/01",
+    "sessions-01": "npm run start -w @react-exercises/sessions/01"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "exercises/*"
+    "exercises/*", 
+    "sessions/*"
   ]
 }
