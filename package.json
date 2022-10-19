@@ -12,7 +12,12 @@
   "author": "",
   "license": "ISC",
   "workspaces": [
-    "exercises/*", 
+    "exercises/*",
     "sessions/*"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^5.2.2",
+    "react-bootstrap": "^2.5.0",
+    "sass": "^1.55.0"
+  }
 }
