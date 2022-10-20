@@ -1,0 +1,62 @@
+.card {
+  width: 600px;
+  margin: 100px auto;
+  background-color: hsl(30, 38%, 92%);
+  border: 1px solid hsl(30, 38%, 80%);
+  padding: 24px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 50px 10px hsla(212, 21%, 14%, 0.2);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.card__category {
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: hsl(228, 12%, 48%);
+  font-size: 0.8rem;
+}
+
+.card__title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 3rem;
+}
+
+.card_text {
+  color: hsl(212, 21%, 14%);
+}
+
+.card__price {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: hsl(158, 36%, 37%);
+}
+
+.card__button-wrapper {
+  display: flex;
+  column-gap: 16px;
+}
+
+.card__button {
+  background-color: hsl(158, 36%, 37%);
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 1em 2em;
+}
+.card__button--delete {
+  background-color: hsl(0, 74%, 47%);
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 1em 2em;
+}
+
+.card__button:hover {
+  cursor: pointer;
+}
