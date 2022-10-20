@@ -5,7 +5,7 @@
   .card__button:hover {
     cursor: pointer;
   }
-  .card__button--sold-out:hover {
+  .card__button--soldOut:hover {
     cursor: not-allowed;
   }
   
