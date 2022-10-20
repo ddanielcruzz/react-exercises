@@ -48,23 +48,8 @@ const products = [
 ];
 
 function App() {
-  const addToCart = () => {
-    alert("Item added to cart");
-  };
-
-  const soldOut = () => {
-    alert("Sorry, item is sold out");
-  };
   return (
     <main>
-      {/* <ProductCard
-        category="perfume"
-        title="Jonatelo Essence"
-        description="lorem ipsum"
-        price="200"
-        handleClick={() => handleClick()}
-      /> */}
-
       {products.map((product) => {
         return (
           <ProductCard
