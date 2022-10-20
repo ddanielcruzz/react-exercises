@@ -1,4 +1,5 @@
 import "./App.css";
+import Card from "./components/ProductCard/ProductCard"
 
 const products = [
   {
@@ -46,22 +47,42 @@ const products = [
   },
 ];
 
+
+
+
+
+function Flex(props){
+  return(
+  <section style={{display: 'flex', flexDirection: 'column', gap : '10px'}}> {/* simulando las columnas de devto */}
+   
+    {props.children}
+    
+    </section>
+  )
+}
+
+
+ 
+
+
+
+
 function App() {
   return (
     <main>
       {/* Only move to a component the code inside this main. Leave the main tag here */}
-      <article className="card">
-        <p className="card__category">perfume</p>
-        <h1 className="card__title">Gabrielle Essence Eau De Parfum</h1>
-        <p className="card__text">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam
-          aspernatur autem nobis quidem at sed, incidunt necessitatibus aliquid.
-          Eligendi ipsam obcaecati dolores vel quasi eum laborum magnam libero.
-          Obcaecati, consequuntur.
-        </p>
-        <p className="card__price">$149.99</p>
-        <button className="card__button">Add to Cart</button>
-      </article>
+      <Flex>
+        {products.map((product) => (
+          <Card
+            key={product.id}
+            category={product.category}
+            title={product.title}
+            description={product.description}
+            price={product.price}
+            isSoldOut={product.isSoldOut}
+          />
+        ))}
+      </Flex>
     </main>
   );
 }
