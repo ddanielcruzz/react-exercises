@@ -50,14 +50,7 @@ function App() {
   return (
     <main>
       {products.map((product) => {
-        <ProductCard
-          key={product.id}
-          category={product.category}
-          title={product.title}
-          description={product.description}
-          price={product.price}
-        />;
-        console.log(
+        return (
           <ProductCard
             key={product.id}
             category={product.category}
