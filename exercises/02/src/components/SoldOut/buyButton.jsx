@@ -1,3 +1,4 @@
+import "./buyButton.css"
 import React from 'react'
 
 function BuyButton() {

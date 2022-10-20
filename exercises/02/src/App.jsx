@@ -1,5 +1,5 @@
 import "./App.css";
-import Card from "./components/ProductCard/ProductCard"
+import Card from "./components/ProductCard/ProductCard";
 
 const products = [
   {
@@ -47,41 +47,32 @@ const products = [
   },
 ];
 
-
-
-
-
-function Flex(props){
-  return(
-  <section style={{display: 'flex', flexDirection: 'column', gap : '10px'}}> {/* simulando las columnas de devto */}
-   
-    {props.children}
-    
+function Flex(props) {
+  return (
+    <section style={{ display: "flex", flexDirection: "column", gap: "5px" }}>
+     
+      {props.children}
     </section>
-  )
+  );
 }
-
-
- 
-
-
-
 
 function App() {
   return (
     <main>
       {/* Only move to a component the code inside this main. Leave the main tag here */}
       <Flex>
-        {products.map((product) => (
+        {products.map((product) => {
+          const { id, category, title, description, price, stock} = product; /* destructuring */
+          return(
           <Card
-            key={product.id}
-            category={product.category}
-            title={product.title}
-            description={product.description}
-            price={product.price}
-            isSoldOut={product.isSoldOut}
-          />
-        ))}
+            key={id}
+            category={category}
+            title={title}
+            description={description}
+            price={price}
+            stock={stock}
+          />)
+        })}
       </Flex>
     </main>
   );

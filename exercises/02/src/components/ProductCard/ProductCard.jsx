@@ -1,19 +1,8 @@
 import React from 'react'
+import {BuyButton, SoldOutButton} from '../SoldOut/buyButton'
 
 
 
-/* function BuyButton() {
-    return <button className="card__button">Add to Cart</button>;
-  }
-  
-  function SoldOutButton() {
-    return (
-      <button disabled className="card__button card__button--soldOut">
-        Sold out
-      </button>
-    );
-  }
- */
 function Card(props) {
   
     return (
@@ -22,9 +11,9 @@ function Card(props) {
         <h1 className="card__title">{props.title}</h1>
         <p className="card__text">{props.description}</p>
         <p className="card__price">${props.price}</p>
-        {/* <section>
-         {props.stock === 0 ? < SoldOutButton /> : <BuyButton />}
-       </section> */}
+        <section>
+         {props.stock === 0 ? <SoldOutButton/> : <BuyButton/>}
+       </section> 
  {/*          {props.isSoldOut ? <SoldOutButton /> : <BuyButton />}
   */}         {/* //si el art esta soldout pasale el componente soldoutbutton  */}
         
