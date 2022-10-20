@@ -1,0 +1,11 @@
+.card__button--soldOut {
+    background-color: gray;
+  }
+  
+  .card__button:hover {
+    cursor: pointer;
+  }
+  .card__button--sold-out:hover {
+    cursor: not-allowed;
+  }
+  
