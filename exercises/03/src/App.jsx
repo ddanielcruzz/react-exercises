@@ -46,6 +46,19 @@ const products = [
   },
 ];
 
+const addToCart = (title) => {
+  alert(`Añadiendo producto ${title} al carrito`);
+};
+
+const deleteProduct = (title, price) => {
+  const newPrice = price * 0.8;
+  alert(
+    `Removiendo producto ${title}. Lamentamos tu decisión podemos ofrecerte un precio prefencial de ${newPrice.toFixed(
+      2
+    )}`
+  );
+};
+
 function App() {
   return (
     <main>
@@ -58,6 +71,8 @@ function App() {
             description={product.description}
             price={product.price}
             stock={product.stock}
+            addToCart={addToCart}
+            deleteProduct={deleteProduct}
           />
         );
       })}
