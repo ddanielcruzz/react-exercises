@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import { ProductCard } from "./components/ProductCard/ProductCard";
 
@@ -7,7 +8,7 @@ const products = [
     title: "iPhone 9",
     description: "An apple mobile which is nothing like apple",
     price: 549,
-    stock: 0,
+    stock: 10,
     category: "smartphones",
   },
   {
@@ -48,8 +49,23 @@ const products = [
 ];
 
 function App() {
+  const [showStock, setShowStock] = useState(false);
+  const [selectedItem, setSelectedItem] = useState("");
+
+  const updateSelectedItem = (title) => {
+    setSelectedItem(title);
+  };
+
   return (
     <main>
+      <p style={{ position: "fixed" }}>{selectedItem}</p>
+      <button
+        onClick={() => {
+          setShowStock(!showStock);
+        }}
+      >
+        Toggle stock
+      </button>
       {products.map((product) => {
         return (
           <ProductCard
@@ -59,6 +75,9 @@ function App() {
             description={product.description}
             price={product.price}
             stock={product.stock}
+            showStock={showStock}
+            setShowStock={setShowStock}
+            updateSelectedItem={updateSelectedItem}
           />
         );
       })}

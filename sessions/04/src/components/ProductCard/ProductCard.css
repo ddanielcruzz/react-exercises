@@ -42,6 +42,16 @@
   border: none;
   padding: 1em 2em;
 }
+.card__button-quantity {
+  background-color: hsl(0, 0%, 55%);
+  font-size: 1rem;
+  color: white;
+  font-weight: 600;
+  border-radius: 10px;
+  border: none;
+  padding: 1em 2em;
+  cursor: pointer;
+}
 
 .card__button:hover {
   cursor: pointer;
