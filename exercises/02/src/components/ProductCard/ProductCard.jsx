@@ -19,7 +19,7 @@ function Card(props) {
         <button className='card__button' onClick={() => handleClick()}> click 
         </button>
         <section>
-         {props.stock === 0 ? <SoldOutButton/> : <BuyButton/>}
+         {stock === 0 ? <SoldOutButton/> : <BuyButton/>}
        </section> 
       </article>
     );
