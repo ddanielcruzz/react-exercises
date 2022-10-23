@@ -1,7 +1,7 @@
-import './App.css';
+import './App.css'
 
-function App() {
+function App () {
   // Put your JSX here
 }
 
-export default App;
+export default App

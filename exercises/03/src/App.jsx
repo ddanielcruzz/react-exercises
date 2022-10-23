@@ -1,68 +1,91 @@
-import { ProductCard } from "./components/ProductCard/ProductCard";
+import { useState } from 'react'
+import { ProductCard } from './components/ProductCard/ProductCard'
 
 const products = [
   {
     id: 1,
-    title: "iPhone 9",
-    description: "An apple mobile which is nothing like apple",
+    title: 'iPhone 9',
+    description: 'An apple mobile which is nothing like apple',
     price: 549,
     stock: 0,
-    category: "smartphones",
+    category: 'smartphones'
   },
   {
     id: 2,
-    title: "iPhone X",
+    title: 'iPhone X',
     description:
-      "SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...",
+      'SIM-Free, Model A19211 6.5-inch Super Retina HD display with OLED technology A12 Bionic chip with ...',
     price: 899,
     stock: 34,
-    category: "smartphones",
+    category: 'smartphones'
   },
   {
     id: 3,
-    title: "Samsung Universe 9",
+    title: 'Samsung Universe 9',
     description:
       "Samsung's new variant which goes beyond Galaxy to the Universe",
     price: 1249,
     stock: 36,
-    category: "smartphones",
+    category: 'smartphones'
   },
   {
     id: 4,
-    title: "OPPOF19",
-    description: "OPPO F19 is officially announced on April 2021.",
+    title: 'OPPOF19',
+    description: 'OPPO F19 is officially announced on April 2021.',
     price: 280,
     stock: 123,
-    category: "smartphones",
+    category: 'smartphones'
   },
   {
     id: 5,
-    title: "Huawei P30",
+    title: 'Huawei P30',
     description:
-      "Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.",
+      'Huawei’s re-badged P30 Pro New Edition was officially unveiled yesterday in Germany and now the device has made its way to the UK.',
     price: 499,
     stock: 0,
-    category: "smartphones",
-  },
-];
+    category: 'smartphones'
+  }
+]
 
-function App() {
+const handleClickAddCart = () => {
+  alert('Añadiendo producto al carrito ')
+}
+
+const handleClickDeleteFromCart = (discount) => {
+  alert(`Removiendo del carrito.
+Lamentamos tu decisión, podemos cambiar el precio por ${discount}`)
+}
+
+function App () { // padre del componente
+  const[showStock, setShowStock] = useState(false)
+  const[selectedItem, setSelectedItem] = useState("")
+
+  const updateSelectedItem = (title) => {
+    setSelectedItem(title)
+  }
+
   return (
     <main>
+      <h1 style={{textAlign: 'center', position:'fixed' }}>{selectedItem}</h1>
+      <button onClick={() => {setShowStock(!showStock)}}>global toggler stock</button>
       {products.map((product) => {
         return (
-          <ProductCard
+          <ProductCard // hijo de App
             key={product.id}
             category={product.category}
             title={product.title}
             description={product.description}
             price={product.price}
             stock={product.stock}
+            handleClickAddCart={handleClickAddCart} // pasando funciones como prop
+            handleClickDeleteFromCart={handleClickDeleteFromCart}
+            showStock = {showStock}
+            updateSelectedItem = {updateSelectedItem} //lo mando dentro de mi componente  para que lo ejecute
           />
-        );
+        )
       })}
     </main>
-  );
+  )
 }
 
-export default App;
+export default App
